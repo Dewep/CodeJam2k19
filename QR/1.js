@@ -6,7 +6,7 @@ async function main (input) {
   for (let index in lines) {
     if (index > 0) {
       const small = lines[index].replace(/4/g, '1')
-      const remaining = +lines[index] - +small
+      const remaining = BigInt(lines[index]) - BigInt(small)
 
       write(`Case #${index}: ${small} ${remaining}\n`)
     }
